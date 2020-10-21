@@ -1,6 +1,6 @@
 # command-line-cart-create
 to test this script please run this command:
-createCart --bill-currency=USD T-shirt T-shirt shoes jacket
+example hosted script on: http://banha.freevar.com/createcart/
 
 This is a free script created as part of challenge
 Stands on PHP and can be excluded by browser or command line: -
