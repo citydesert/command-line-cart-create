@@ -53,7 +53,7 @@ class HandleInput{
 		}
 		function curency_list(){
 				foreach($this->billing->dbArray["currencies"] as $v){
-					$this->output.= "ID:".$v["id"]."\tTitle:".$v["title"]."\t Price: ".$v["price"]."\n";
+					$this->output.= "Icon: [ ".$v["sign"]." ]   \t   Title:".$v["title"]."  \t   Price: ".$v["price"]."  \n";
 				}
 				return $this->get_output();
 		}
