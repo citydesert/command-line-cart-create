@@ -34,6 +34,9 @@ class HandleInput{
 				case currencylist:
 					return $this->curency_list();
 				break;
+				case offerlist:
+					return $this->offer_list();
+				break;
 				case createcart:
 					return $this->createCart();
 				break;
@@ -51,6 +54,12 @@ class HandleInput{
 		function curency_list(){
 				foreach($this->billing->dbArray["currencies"] as $v){
 					$this->output.= "ID:".$v["id"]."\tTitle:".$v["title"]."\t Price: ".$v["price"]."\n";
+				}
+				return $this->get_output();
+		}
+		function offer_list(){
+				foreach($this->billing->dbArray["offers"] as $v){
+					$this->output.= "ID:".$v["id"]."\t if:".$this->billing->get_item("products","id",$v["discount_on"])["title"]." >= ".$v["discount_amount"]."  --> \t Target:".$this->billing->get_item("products","id",$v["discount_target"])["title"]."\t Price: -".$v["discount_percent"]."% \n";
 				}
 				return $this->get_output();
 		}

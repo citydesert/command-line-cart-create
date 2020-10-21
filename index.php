@@ -1,5 +1,4 @@
 <?php
-/*#!C:\AppServ\php7\php.exe -q*/
 if(!file_exists("BillingClass.php")){print "BillingClass File not found!";exit;} // check if class file exists
 if(!file_exists("HandleInput.php")){print "HandelInput File not found!";exit;} // check if class file exists
 
@@ -17,7 +16,7 @@ if(!$_SERVER[HTTP_HOST]){
 	$handleInput->output="";
 	$createCart->reset();
 }else{
-	
+
 	if($_POST["command"]){
 		$handleInput->get_input($_POST["command"]);
 		$posted = $_POST["command"]."<hr>".$handleInput->get_output();
@@ -44,4 +43,4 @@ if(!$_SERVER[HTTP_HOST]){
 
 }
 
-?>
+?> 
