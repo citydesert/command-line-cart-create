@@ -21,10 +21,13 @@ To test the patch file, open the .bat file, modify it if php.exe is not in C:\ph
 
 "C:\php\php.exe" index.php %*
 
-then enter ant command of this
+then enter any command of this
 
 productList // for a product list
+currencyList // return list of currencies
+offerList // return list of avilable offers
 createCart // to create invoice list items with a separate space
+
 Example: 
 createCart T-shirt T-shirt shoes jacket
 createCart --bill-currency=EGP T-shirt T-shirt shoes
